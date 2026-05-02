@@ -1,0 +1,155 @@
+.order-page {
+  padding: 18px 24px;
+}
+
+.order-layout {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 18px;
+}
+
+.order-main {
+  display: grid;
+  gap: 18px;
+}
+
+/* panels */
+.orders-panel,
+.details-panel {
+  background: rgba(255,255,255,0.12);
+  padding: 20px;
+  border-radius: 28px;
+}
+
+/* table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(255,255,255,0.2);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+th {
+  background: rgba(255,255,255,0.4);
+  color: #2e3d4c;
+  font-weight: 600;
+}
+
+th, td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255,255,255,0.35);
+}
+
+th:not(:last-child),
+td:not(:last-child) {
+  border-right: 1px solid rgba(255,255,255,0.22);
+}
+
+/* rows */
+tr {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+tr:hover {
+  background: rgba(255,255,255,0.25);
+}
+
+/* ✅ SELECTED ROW (important) */
+tr.selected {
+  background: #b590d7;
+}
+
+/* fix text color inside selected row */
+tr.selected td {
+  color: white;
+  font-weight: 600;
+}
+
+/* status inside selected */
+tr.selected .status {
+  color: white;
+  background: rgba(255,255,255,0.2);
+}
+
+/* status */
+.status {
+  padding: 4px 10px;
+  border-radius: 10px;
+  font-size: 12px;
+}
+
+.status.pending {
+  background: #ffd2d2;
+  color: red;
+}
+
+.status.shipped {
+  background: #d6f5d6;
+  color: green;
+}
+
+.status.delivered {
+  background: #d8e7ff;
+  color: #3d6fd1;
+}
+
+tr.selected .status.pending {
+  background: #ffd2d2;
+  color: #d96a3a;
+}
+
+tr.selected .status.shipped {
+  background: #d6f5d6;
+  color: #3d9b44;
+}
+
+tr.selected .status.delivered {
+  background: #d8e7ff;
+  color: #3d6fd1;
+}
+
+
+/* product */
+.product-cell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.product-cell img {
+  width: 40px;
+}
+
+/* buttons */
+.update-btn {
+  height: 42px;
+  background: #8f42d9;
+  color: white;
+  border: none;
+  padding: 0 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* update */
+.update-section {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.update-section select {
+  height: 42px;         
+  text-align: center;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: rgba(255,255,255,0.95);
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 14px;
+  min-width: 140px;
+  box-sizing: border-box;
+}

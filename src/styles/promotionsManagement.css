@@ -1,0 +1,188 @@
+.promo-page {
+  min-height: 100vh;
+  padding: 18px 24px;
+  box-sizing: border-box;
+}
+
+.promo-layout {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 18px;
+}
+
+.promo-main {
+  display: grid;
+  gap: 18px;
+}
+
+.promo-panel,
+.promo-empty-panel {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 28px;
+  backdrop-filter: blur(14px);
+  padding: 22px 26px;
+  box-sizing: border-box;
+}
+
+.promo-panel {
+  min-height: 280px;
+}
+
+.promo-empty-panel {
+  min-height: 260px;
+}
+
+.promo-panel h2 {
+  margin: 0 0 26px;
+  font-size: 28px;
+  color: #2e3d4c;
+  font-weight: 700;
+}
+
+.promo-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px 30px;
+}
+
+.promo-field label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 15px;
+  color: #2e3d4c;
+}
+
+.promo-field input,
+.promo-field select {
+  width: 100%;
+  height: 54px;
+  padding: 0 16px;
+  border-radius: 14px;
+  border: 1px solid #cfcfcf;
+  outline: none;
+  font-size: 15px;
+  font-family: "Josefin Sans", sans-serif;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.96);
+  color: #2e3d4c;
+}
+
+.promo-field input::placeholder {
+  color: #6b7280;
+}
+
+.promo-field select {
+  cursor: pointer;
+}
+
+.promo-actions {
+  margin-top: 26px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* --- Fixed Button Padding --- */
+.promo-create-btn {
+  background: #8f42d9;
+  color: white;
+  border: none;
+  border-radius: 14px;      /* Consistent with FAQ buttons */
+  padding: 12px 24px;       /* Proper bubble padding */
+  min-width: 110px;         /* Good width for "Create" text */
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.promo-create-btn:hover {
+  background: #7c35c3;
+  transform: translateY(-1px);
+}
+
+.promo-create-btn:active {
+  transform: scale(0.96);
+}
+
+/* --- Color & Message Styles --- */
+.promo-saved-text {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* --- Custom Modal Styling --- */
+.custom-modal-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3000;
+  backdrop-filter: blur(10px);
+}
+
+.custom-modal-card {
+  background: white;
+  padding: 35px;
+  border-radius: 28px;
+  width: 90%;
+  max-width: 420px;
+  text-align: center;
+  box-shadow: 0 24px 48px rgba(0,0,0,0.15);
+  animation: slideIn 0.3s ease-out;
+}
+
+.custom-modal-card h3 {
+  margin-bottom: 15px;
+  font-size: 22px;
+}
+
+.modal-actions {
+  margin-top: 25px;
+}
+
+.confirm-btn {
+  width: 100%;
+  padding: 14px;
+  border-radius: 14px;
+  border: none;
+  background: #8f42d9;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+/* --- Utility Classes --- */
+.msg-green { color: #3d9b44 !important; }
+.msg-red { color: #ff4d4d !important; }
+
+@keyframes slideIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* Specifically for the green success message */
+.msg-green {
+  color: #3d9b44 !important; 
+}
+
+@media (max-width: 1100px) {
+  .promo-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 850px) {
+  .promo-form-grid {
+    grid-template-columns: 1fr;
+  }
+}

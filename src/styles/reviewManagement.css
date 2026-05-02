@@ -1,0 +1,212 @@
+.review-page {
+  padding: 18px 24px;
+}
+
+.review-layout {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 18px;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sidebar button {
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.35);
+  border-radius: 18px;
+  padding: 14px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 18px;
+  cursor: pointer;
+  color: #2e3d4c;
+}
+
+.sidebar .active {
+  font-weight: 700;
+}
+
+.logo-card {
+  background: rgba(255,255,255,0.12);
+  border-radius: 24px;
+  padding: 16px;
+  text-align: center;
+}
+
+.logo-card img {
+  width: 120px;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.review-main {
+  display: grid;
+  gap: 18px;
+}
+
+.products-panel {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  background: rgba(255,255,255,0.10);
+  padding: 20px;
+  border-radius: 28px;
+}
+
+.product-card {
+  width: 180px;
+  background: rgba(255,255,255,0.22);
+  border-radius: 18px;
+  padding: 16px;
+  text-align: center;
+}
+
+.product-card img {
+  width: 140px;
+  height: 140px;
+  object-fit: contain;
+}
+
+.product-card h3 {
+  color: #2e3d4c;
+}
+
+.product-card button {
+  margin-top: 10px;
+  background: #8f42d9;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.reviews-panel {
+  background: rgba(255,255,255,0.10);
+  padding: 20px;
+  border-radius: 28px;
+}
+
+.reviews-panel h2 {
+  color: #2e3d4c;
+}
+
+.review-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255,255,255,0.22);
+  padding: 14px 16px;
+  border-radius: 16px;
+  margin-bottom: 12px;
+  gap: 14px;
+}
+
+.review-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.review-user-img {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.review-text-box {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.review-user-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #2e3d4c;
+}
+
+.review-text-box p {
+  margin: 0;
+  color: #b45f69;
+  font-size: 15px;
+}
+
+.delete-review-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: #8f42d9;
+  flex-shrink: 0;
+}
+
+.empty {
+  text-align: center;
+  padding: 20px;
+  color: #2e3d4c;
+}
+
+/* --- Modal Styles --- */
+.custom-modal-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3000;
+  backdrop-filter: blur(10px);
+}
+
+.custom-modal-card {
+  background: white;
+  padding: 35px;
+  border-radius: 28px;
+  width: 90%;
+  max-width: 420px;
+  text-align: center;
+  box-shadow: 0 24px 48px rgba(0,0,0,0.15);
+  animation: slideIn 0.3s ease-out;
+}
+
+.modal-actions-split {
+  display: flex;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.cancel-btn, .delete-btn-final {
+  flex: 1;
+  padding: 14px;
+  border-radius: 14px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.cancel-btn { background: #f0f0f0; color: #2e3d4c; }
+.delete-btn-final { background: #ff4d4d; color: white; }
+
+.msg-red { color: #ff4d4d !important; }
+
+@keyframes slideIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@media (max-width: 1100px) {
+  .review-layout {
+    grid-template-columns: 1fr;
+  }
+}

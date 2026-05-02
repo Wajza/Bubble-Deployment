@@ -1,0 +1,94 @@
+/* Sidebar base */
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1000;
+}
+
+/* Logo */
+.logo-card img {
+  width: 100%;
+  max-width: 120px;
+  margin: 0 auto 20px;
+  display: block;
+}
+
+/* Buttons */
+.sidebar button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.sidebar button.active {
+  background: #eee;
+}
+
+/* Push logout to bottom */
+.spacer {
+  flex-grow: 1;
+}
+
+/* Toggle button (hidden on desktop) */
+.menu-toggle {
+  display: none;
+}
+
+/* Overlay */
+.overlay {
+  display: none;
+}
+
+/* ---------------- MOBILE ---------------- */
+@media (max-width: 768px) {
+  /* Toggle button visible */
+  .menu-toggle {
+    display: block;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    font-size: 22px;
+    background: #fff;
+    border: none;
+    z-index: 1100;
+    cursor: pointer;
+  }
+
+  /* Sidebar hidden by default */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 220px;
+    height: 100vh;
+    transition: left 0.3s ease;
+  }
+
+  /* When open */
+  .sidebar.open {
+    left: 0;
+  }
+
+  /* Overlay when open */
+  .overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 900;
+  }
+}
