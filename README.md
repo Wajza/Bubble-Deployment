@@ -13,6 +13,17 @@
 
 ---
 
+## Team Members
+
+| Name | ID | Contributions |
+|---|---|---|
+| Fatimah Alshehab | 202278660 | Back End - Design |
+| Raneem Alshahrani | 202277080 | Front End - Documentation |
+| Wajd Alghamdi | 202262140 | Back End - Documentation |
+| Yasmeen Alshehri | 202271660 | Front End - Design |
+
+---
+
 ## Description
 
 This is the deployed version of the **Bubble Soap Store** application.  
